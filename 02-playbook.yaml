@@ -1,7 +1,7 @@
-- name : print sytax
-  hosts : web
-  tasks :
-  - name : print name
+- name: print 
+  hosts: web
+  tasks:
+  - name: print name
     ansible.builtin.debug
        msg:
        - "hello world"
