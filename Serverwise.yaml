@@ -1,0 +1,6 @@
+- name : server wise variables
+  hosts: web
+  tasks:
+   -name: server wise 
+    ansible.builtin.debug:
+       msg: "print : {{name}}"
