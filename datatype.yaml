@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    username: Playvariables # string
+    username: manjunath # string
     age: 100 # number
     Langues:
        - telugu
