@@ -1,7 +1,7 @@
 - name: connect local server
   hosts: local
   connection: local
-  -tasks:
-     - name: p
-       ansible.builtin.debug:
-         msg: "connecting local server"
+  tasks:
+   - name: balu
+     ansible.builtin.debug:
+      msg: "connecting local server"
