@@ -1,7 +1,9 @@
 - name: Print name
   hosts: web
-  vars:
-    name: "manju"
+  vars_prompt:
+    - name: username
+      prompt: what is your name?
+      private: false
   tasks:
   - name: print 
     ansible.builtin.debug:
