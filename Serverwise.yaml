@@ -1,4 +1,4 @@
-- name : server wise variables
+- name: server wise variables
   hosts: web
   tasks:
    -name: server wise 
