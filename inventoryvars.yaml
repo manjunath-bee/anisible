@@ -3,5 +3,5 @@
   connection: local
   tasks:
    - name : invenveraibles
-      ansible.builtin.debug:
+     ansible.builtin.debug:
       msg: "connecting local {{name}}"
