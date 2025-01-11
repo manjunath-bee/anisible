@@ -1,0 +1,8 @@
+- name : filelevel variables
+  hosts: web
+  vars_file:
+   - vars.yaml 
+  tasks:
+   - name : invenveraibles
+     ansible.builtin.debug:
+      msg: "connecting local {{name}}"
