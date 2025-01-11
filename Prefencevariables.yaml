@@ -1,0 +1,17 @@
+- name: arngvariable
+  hosts: local
+  connection: local
+  vars:
+   username : Playvariables
+  vars_prompt:
+    - name: username
+      prompt: what is your name?
+      private: false
+  vars_files:
+   - vars.yaml
+  tasks:
+   - name: arngvariables
+     vars:
+       username : Playvariables
+     ansible.builtin.debug:
+       msg: "print : {{username}}"
