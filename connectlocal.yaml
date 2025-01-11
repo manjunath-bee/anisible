@@ -1,0 +1,7 @@
+- name: connect local server
+  hosts: local
+  conncetions: local
+  -tasks:
+  - name: print 
+    ansible.builtin.debug:
+       msg: "connecting local server"
