@@ -1,7 +1,7 @@
-- name : filelevel variables
+- name : arng
   hosts: local
   connection: local
   tasks:
-   - name : invenveraibles
+   -name: arng
      ansible.builtin.debug:
-      msg: "connecting local {{name}}"
+       msg: "print : {{username}}"
