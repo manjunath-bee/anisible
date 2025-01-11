@@ -1,0 +1,18 @@
+- name: arngvariable
+  hosts: local
+  connection: local
+  vars:
+  username: Playvariables # string
+  age: 100 # number
+  Langues:
+   - telugu
+   - kanada
+   skill:
+    - cloud: aws
+    - os: linux
+  tasks:
+   - name: arngvariables
+    #  vars:
+    #    username : taskvariables
+     ansible.builtin.debug:
+       msg: "my name {{username}}, age: {{age}}, I know:{{Langues}},he good:{{skill}}"
