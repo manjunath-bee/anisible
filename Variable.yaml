@@ -1,8 +1,8 @@
-- name : Print name
-  hots : web
+- name: Print name
+  hots: web
   vars:
   name: manju
   tasks:
-  - name : print 
+  - name: print 
    ansible.builtin.debug:
     msg: "print:{{manju}}"
