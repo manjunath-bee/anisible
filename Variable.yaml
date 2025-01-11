@@ -1,7 +1,7 @@
-- name: Printname
+- name: Print name
   hosts: web
   vars:
-  name: manju
+    name: "manju"
   tasks:
   - name: print 
     ansible.builtin.debug:
