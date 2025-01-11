@@ -1,6 +1,6 @@
 - name: Print name
   hosts: web
   tasks:
-  - name: print 
-    ansible.builtin.debug:
+   - name: print 
+     ansible.builtin.debug:
        msg: "print : {{name}}"
