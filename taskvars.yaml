@@ -6,5 +6,5 @@
    - name : task level variables
      vars:
       name : sudheer
-    ansible.builtin.debug:
+     ansible.builtin.debug:
       msg: "connecting local {{name}}"
