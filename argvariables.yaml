@@ -1,7 +1,7 @@
-- name : arng
+- name: arng
   hosts: local
   connection: local
   tasks:
    -name: arng
-     ansible.builtin.debug:
+    ansible.builtin.debug:
        msg: "print : {{username}}"
