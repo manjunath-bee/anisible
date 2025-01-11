@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-   username : Playvariables
+   username: Playvariables
   vars_prompt:
     - name: username
       prompt: what is your name?
