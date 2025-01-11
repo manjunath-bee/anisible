@@ -5,6 +5,6 @@
       prompt: what is your name?
       private: false
   tasks:
-  - name: print 
-    ansible.builtin.debug:
+   - name: print 
+     ansible.builtin.debug:
        msg: "print : {{username}}"
