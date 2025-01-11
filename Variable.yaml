@@ -1,5 +1,5 @@
-- name: Print name
-  hots: web
+- name: Printname
+  hosts: web
   vars:
   name: manju
   tasks:
