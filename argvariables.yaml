@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-   -name: arng
-    ansible.builtin.debug:
+   - name: arng
+     ansible.builtin.debug:
        msg: "print : {{username}}"
