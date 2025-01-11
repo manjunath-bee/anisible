@@ -4,5 +4,5 @@
   name: manju
   tasks:
   - name: print 
-   ansible.builtin.debug:
+    ansible.builtin.debug:
     msg: "print:{{manju}}"
