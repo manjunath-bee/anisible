@@ -27,5 +27,5 @@
            - key: Environment
              value: dev
        ansible.builtin.debug:
-         msg: "{{ COURCE | items2dict }}"
+         msg: "{{ tags | items2dict }}"
         
