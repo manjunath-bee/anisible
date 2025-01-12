@@ -1,0 +1,17 @@
+- name: loop install 
+  hosts: web
+  become: yes
+  tasks:
+     - name: loop install  in radhat
+       ansible.builtin.dnf:
+         name: "{{ item_name }}"
+         state: "{{ item_state }}"
+       loop:
+         - { name: 'nginx' , state: 'present'} 
+         - { name: 'gem' , state: 'absent'}  
+       
+
+
+       
+
+
