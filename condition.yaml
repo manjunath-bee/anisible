@@ -3,4 +3,4 @@
   tasks:
      - name: arngvariables
        ansible.builtin.debug:
-         msg: "{{ansible}}"
+         msg: "{{ansible_facts}}"
