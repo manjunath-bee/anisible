@@ -6,9 +6,9 @@
        ansible.builtin.dnf:
          name: "{{ item }}"
          state: present
-         loop:
-           - nginx
-           - gem
+       loop:
+         - nginx
+         - gem
        
 
 
