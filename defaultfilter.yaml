@@ -28,4 +28,12 @@
              value: dev
        ansible.builtin.debug:
          msg: "{{ COURCE | items2dict }}"
+
+     - name: convert map to list
+       vars:
+         numbers: [12,34,2,4555,567]
+       ansible.builtin.debug:
+         msg: "min: {{ numbers | min }}, max:{{numbers | max }} "
+
+    
         
