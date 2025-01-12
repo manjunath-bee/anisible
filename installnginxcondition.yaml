@@ -1,0 +1,11 @@
+- name: install nginx
+  hosts: web
+  tasks:
+     - name: install nginx in radhat
+       ansible.builtin.dnf:
+         name: nginx
+         state: present
+      when: ansible_os_family == "RedHat"
+       
+
+
