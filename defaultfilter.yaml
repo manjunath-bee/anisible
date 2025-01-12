@@ -3,4 +3,4 @@
   tasks:
      - name: defaulfikter
        ansible.builtin.debug:
-         msg: "{{manju}}"
+         msg: "{{manju | default(5)}}"
