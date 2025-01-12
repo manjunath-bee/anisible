@@ -1,0 +1,7 @@
+- name: printvalues
+  hosts: local
+  connection: local
+  tasks:
+    - name: arngvariables
+     ansible.builtin.debug:
+     msg: "{{ansible}}"
