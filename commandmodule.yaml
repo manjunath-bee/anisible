@@ -1,0 +1,5 @@
+- name : command
+  hosts: web
+  tasks:
+   - name: excute command
+     ansible.builtin.command: cat /etc/motd
