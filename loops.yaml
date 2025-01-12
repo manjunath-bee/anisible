@@ -1,0 +1,18 @@
+- name: loop install 
+  hosts: web
+  become: yes
+  tasks:
+     - name: loop install  in radhat
+       ansible.builtin.dnf:
+         name: {{item}}
+         state: present
+         loop:
+           - nginx
+           - gem
+       when: ansible_os_family == "RedHat"
+       
+
+
+       
+
+
