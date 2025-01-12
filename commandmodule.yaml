@@ -1,8 +1,8 @@
 - name : command
   hosts: web
   tasks:
-   - name: excute command
-     ansible.builtin.command: ls -lrth > /tmp/output.txt
+  #  - name: excute command
+  #    ansible.builtin.command: ls -lrth > /tmp/output.txt
 
    - name: excute command
      ansible.builtin.shell: ls -lrth > /tmp/output.txt
