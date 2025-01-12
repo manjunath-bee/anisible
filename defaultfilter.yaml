@@ -4,3 +4,9 @@
      - name: defaulfikter
        ansible.builtin.debug:
          msg: "{{manju | default(5)}}"
+
+     - name: defaulfikter
+       vars:
+         fruits: banana,apply
+       ansible.builtin.debug:
+         msg: "{{ fruits | split(',') }}"
