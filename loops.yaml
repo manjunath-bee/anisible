@@ -9,7 +9,6 @@
          loop:
            - nginx
            - gem
-       when: ansible_os_family == "RedHat"
        
 
 
