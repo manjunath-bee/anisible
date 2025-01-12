@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-    - name: arngvariables
+     - name: arngvariables
      ansible.builtin.debug:
-     msg: "{{ansible}}"
+       msg: "{{ansible}}"
