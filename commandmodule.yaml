@@ -3,6 +3,11 @@
   tasks:
    - name: excute command
      ansible.builtin.command: ls -lrth 
+     register: command_output
 
    - name: excute command
-     ansible.builtin.shell: ls -lrth > /tmp/output.txt
+     ansible.builtin.shell: ls -lrth > /tmp/output.
+     
+   - name: print output
+     ansible.builtin.debug:
+         msg: "{{command_output.rc}}"
