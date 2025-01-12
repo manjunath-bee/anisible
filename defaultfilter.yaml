@@ -18,4 +18,13 @@
            duration: 12
        ansible.builtin.debug:
          msg: "{{ COURCE | dict2items  }}"
+
+     - name: convert map to list
+       vars:
+         COURCE:
+         - balu
+         - manju
+         - spurthi
+       ansible.builtin.debug:
+         msg: "{{ COURCE | items2dict }}"
         
