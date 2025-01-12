@@ -5,7 +5,7 @@
        ansible.builtin.debug:
          msg: "{{manju | default(5)}}"
 
-     - name: defaulfikter
+     - name: Convert string to list
        vars:
          fruits: " banana , apply "
        ansible.builtin.debug:
