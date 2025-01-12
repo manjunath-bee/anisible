@@ -21,7 +21,7 @@
 
      - name: convert map to list
        vars:
-         tags:
+          tags:
            - key: Application
              value: payment
            - key: Environment
