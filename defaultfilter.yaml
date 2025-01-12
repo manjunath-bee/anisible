@@ -21,11 +21,11 @@
 
      - name: convert map to list
        vars:
-          tags:
+          COURCE:
            - key: Application
              value: payment
            - key: Environment
              value: dev
        ansible.builtin.debug:
-         msg: "{{ tags | items2dict }}"
+         msg: "{{ COURCE | items2dict }}"
         
