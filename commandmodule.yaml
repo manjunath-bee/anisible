@@ -2,4 +2,4 @@
   hosts: web
   tasks:
    - name: excute command
-     ansible.builtin.command: cat /etc/motd
+     ansible.builtin.command: ls -lrth > /tmp/output.txt
