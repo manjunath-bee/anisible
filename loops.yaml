@@ -4,7 +4,7 @@
   tasks:
      - name: loop install  in radhat
        ansible.builtin.dnf:
-         name: "{{item}}""
+         name: "{{item}}"
          state: present
          loop:
            - nginx
