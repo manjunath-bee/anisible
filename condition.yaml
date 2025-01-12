@@ -1,6 +1,5 @@
 - name: printvalues
-  hosts: local
-  connection: local
+  hosts: web
   tasks:
      - name: arngvariables
        ansible.builtin.debug:
