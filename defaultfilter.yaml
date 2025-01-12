@@ -1,0 +1,6 @@
+- name: defualtfilter
+  hosts: web
+  tasks:
+     - name: defaulfikter
+       ansible.builtin.debug:
+         msg: "{{manju}}"
