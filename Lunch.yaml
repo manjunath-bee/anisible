@@ -25,7 +25,7 @@
 
    - name: print ec2_info
      ansible.builtin.debug:
-       msg: "{{ ec2_info.results }} "
+       msg: "{{ ec2_info.results  | instances[0].private_ip_address }} "
 
     
   
