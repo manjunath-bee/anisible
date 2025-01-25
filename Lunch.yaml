@@ -1,18 +1,18 @@
--name : Lunch Ec2 and Route 53
-hosts: local
-connnections: local
-tasks: 
-- name: start an instance with a public IP address
-  amazon.aws.ec2_instance:
-     name: "{{ item }}"
-     vpc_subnet_id: subnet-0c26e13f782edfff0
-     instance_type: t2.micro
-     security_group: sg-0a66b33908bd8eb94
-     image_id: ami-09c813fb71547fc4f
-     network_interfaces:
-       - assign_public_ip: true
- loops:
-   - mysql
-   - backend
-   - web
+- name : Lunch Ec2 and Route 53
+  hosts: local
+  connnections: local
+  tasks: 
+   - name: start an instance with a public IP address
+     amazon.aws.ec2_instance:
+       name: "{{ item }}"
+       vpc_subnet_id: subnet-0c26e13f782edfff0
+       instance_type: t2.micro
+       security_group: sg-0a66b33908bd8eb94
+       image_id: ami-09c813fb71547fc4f
+       network_interfaces:
+        - assign_public_ip: true
+     loops:
+      - mysql
+      - backend
+      - web
   
