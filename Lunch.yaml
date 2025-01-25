@@ -25,7 +25,7 @@
        - web
 
    - name: Gather EC2 remote facts.
-     ec2_instance_facts:
+     ec2_instance_info:
         filters:
            availability-zone: us-east-1
      register: ec2_instance_facts
