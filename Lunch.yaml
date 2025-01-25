@@ -11,7 +11,7 @@
        image_id: ami-09c813fb71547fc4f
        network_interfaces:
         - assign_public_ip: true
-     loops:
+     loop:
        - mysql
        - backend
        - web
