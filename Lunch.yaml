@@ -1,6 +1,7 @@
 - name : Lunch Ec2 and Route 53
   hosts: local
   connection: local
+  gather_facts: yes
   tasks: 
    - name: Install bottle for Python 3.3 specifically, using the 'pip3.3' executable
      ansible.builtin.pip:
