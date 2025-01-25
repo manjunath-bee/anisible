@@ -24,6 +24,10 @@
        - backend
        - web
 
+   - name: print ec2_info
+     ansible.builtin.debug:
+       msg: "{{ ec2_info | json_query('results.instances[*].private_ip_address') }}"
+
    - name: Gather EC2 remote facts.
      ec2_instance_info:
         filters:
