@@ -24,17 +24,17 @@
        - backend
        - web
 
-  #  - name: print ec2_info
-  #    ansible.builtin.debug:
-  #      msg: "{{ ec2_info.results }}"
+   - name: print ec2_info
+     ansible.builtin.debug:
+       msg: "{{ ec2_info.results.instances | json_query('instances[*].private_ip_address') }}"
 
-   - name: Gather EC2 remote facts.
-     ec2_instance_info:
-        filters:
-           availability-zone: us-east-1d
-     register: ec2_instance_facts
-   -  set_fact:
-         msg: "{{ ec2_instance_facts }} "
-   - debug: var=msg
+  #  - name: Gather EC2 remote facts.
+  #    ec2_instance_info:
+  #       filters:
+  #          availability-zone: us-east-1d
+  #    register: ec2_instance_facts
+  #  -  set_fact:
+  #        msg: "{{ ec2_instance_facts }} "
+  #  - debug: var=msg
     
   
