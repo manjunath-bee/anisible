@@ -30,8 +30,8 @@
            availability-zone: us-east-1
      register: ec2_instance_facts
 
-  - name: print ec2_info
-    ansible.builtin.debug:
-      msg: "{{ ec2_instance_facts | json_query('instances[*].private_ip_address') }}"
+   - name: print ec2_info
+     ansible.builtin.debug:
+       msg: "{{ ec2_instance_facts | json_query('instances[*].private_ip_address') }}"
     
   
