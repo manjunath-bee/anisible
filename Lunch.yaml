@@ -2,6 +2,8 @@
   hosts: local
   connection: local
   gather_facts: yes
+  vars:
+    zone: aws82s.online
   tasks: 
    - name: Install bottle for Python 3.3 specifically, using the 'pip3.3' executable
      ansible.builtin.pip:
@@ -26,8 +28,32 @@
 
    - name: print ec2_info
      ansible.builtin.debug:
-       msg: "{{ item.instances[0].network_interfaces[0].private_ip_address }}"
+       msg: "{{ item.instances[0].private_ip_address }}"
      loop: "{{ ec2_info.results }}"
+
+   - name: Add new.foo.com as an A record with 3 IPs and wait until the changes have been replicated
+     amazon.aws.route53:
+       state: present
+       zone: "{{ zone }}"
+       record: "{{item.item }}.{{ zone }}"
+       type: A
+       ttl: 1
+       value: "{{ item.instances[0].private_ip_address }}"
+       wait: true
+     loop: "{{ ec2_info.results }}"
+
+   - name: Add new.foo.com as an A record with 3 IPs and wait until the changes have been replicated
+     amazon.aws.route53:
+       state: present
+       zone: "{{ zone }}"
+       record: "{{item.item }}.{{ zone }}"
+       type: A
+       ttl: 1
+       value: "{{ item.instances[0].public_ip_address }}"
+       wait: true
+     loop: "{{ ec2_info.results }}"
+     when: item.item == "web"
+
 
     
   
