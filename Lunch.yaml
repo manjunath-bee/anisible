@@ -26,10 +26,10 @@
        - backend
        - web
 
-   - name: print ec2_info
-     ansible.builtin.debug:
-       msg: "{{ item.instances[0].private_ip_address }}"
-     loop: "{{ ec2_info.results }}"
+  #  - name: print ec2_info
+  #    ansible.builtin.debug:
+  #      msg: "{{ item.instances[0].private_ip_address }}"
+  #    loop: "{{ ec2_info.results }}"
 
    - name: Add new.foo.com as an A record with 3 IPs and wait until the changes have been replicated
      amazon.aws.route53:
