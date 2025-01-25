@@ -42,6 +42,7 @@
        wait: true
        overwrite: true
      loop: "{{ ec2_info.results }}"
+     when: item.item == "mysql"  and item.item == "backend"
 
    - name: Add new.foo.com as an A record with 3 IPs and wait until the changes have been replicated
      amazon.aws.route53:
