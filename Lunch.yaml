@@ -26,7 +26,7 @@
 
    - name: print ec2_info
      ansible.builtin.debug:
-       msg: "{{ ec2_info.results.instances[] }}"
+       msg: "{{ ec2_info.results.instances[0].private_ip_address }}"
 
   #  - name: Gather EC2 remote facts.
   #    ec2_instance_info:
